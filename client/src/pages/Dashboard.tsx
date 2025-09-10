@@ -1,6 +1,5 @@
-import React from "react";
-import Sidebar from "../components/Sidebar.tsx";
-import Navbar from "../components/Navbar.tsx";
+import Sidebar from "../components/Sidebar";
+import Navbar from "../components/Navbar";
 import "../css/Dashboard.css";
 
 const Dashboard = () => {

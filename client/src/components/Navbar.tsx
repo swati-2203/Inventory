@@ -1,7 +1,6 @@
-import React from "react";
 import "../css/Navbar.css";
 
-const Navbar = ({ adminName }) => {
+const Navbar = ({ adminName }: { adminName: string }) => {
   return (
     <div className="navbar">
       <div className="logo">CRM Dashboard</div>

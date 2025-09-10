@@ -2,7 +2,6 @@ import { useState } from "react";
 import axios, { AxiosError } from "axios";
 import { useNavigate } from "react-router-dom";
 import "../css/Login.css"; // Make sure CSS exists
-import  dashboard from "./Dashboard.tsx"
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

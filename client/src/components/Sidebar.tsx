@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../css/Sidebar.css";
 
+// Icon placeholders
 const DashboardIcon = () => <span>📊</span>;
 const ClientsIcon = () => <span>👥</span>;
 const LeadsIcon = () => <span>📈</span>;
@@ -12,9 +13,9 @@ const LogoutIcon = () => <span>🚪</span>;
 
 interface MenuItem {
   name: string;
-  icon: JSX.Element;
-  path?: string; // For main menu routing
-  subMenu?: { name: string; path: string }[]; // Submenu routing
+  icon: React.ReactNode; // JSX.Element बदलून React.ReactNode
+  path?: string; 
+  subMenu?: { name: string; path: string }[]; 
 }
 
 const Sidebar: React.FC = () => {
@@ -25,12 +26,14 @@ const Sidebar: React.FC = () => {
     { name: "Dashboard", icon: <DashboardIcon />, path: "/dashboard" },
     { name: "Clients", icon: <ClientsIcon />, path: "/clients" },
     { name: "Leads", icon: <LeadsIcon />, path: "/leads" },
-    { name: "Reports", icon: <ReportsIcon />, subMenu: [
+    { 
+      name: "Reports", icon: <ReportsIcon />, subMenu: [
         { name: "Sales", path: "/reports/sales" },
         { name: "Marketing", path: "/reports/marketing" },
       ] 
     },
-    { name: "Supplier Master", icon: <SupplierIcon />, subMenu: [
+    { 
+      name: "Supplier Master", icon: <SupplierIcon />, subMenu: [
         { name: "Add Supplier", path: "/supplier/add" },
         { name: "View Suppliers", path: "/supplier/view" },
       ]
